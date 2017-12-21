@@ -38,9 +38,9 @@ def create(request):
     if not request.user.is_authenticated():
         return HttpResponseRedirect('/index')
 
-    form = UserCreationForm()
+    form = CreateUserForm()
     if request.method == 'POST':
-        form = UserCreationForm(request.POST)
+        form = CreateUserForm(request.POST)
         if form.is_valid():
             u = User()
             u.username = form.cleaned_data.get('username')
@@ -50,6 +50,12 @@ def create(request):
             u.set_password(form.cleaned_data.get('password'))
             u.save()
 
+            return HttpResponse('''
+            <script>
+                window.location.href = '/users';
+            </script>
+            ''')
+
     context = {
         'form': form,
     }
@@ -58,9 +64,10 @@ def create(request):
 
 
 class CreateUserForm(forms.Form):
-    username = forms.EmailField(label='Email', required=True, max_length=100, widget=forms.EmailInput(attrs={ 'class' : 'form-control'}))
+    username = forms.CharField(label='Username', required=True, max_length=100, widget=forms.TextInput(attrs={ 'class' : 'form-control'}))
     first_name = forms.CharField(label='First Name', required=True, max_length=100, widget=forms.TextInput(attrs={ 'class' : 'form-control'}))
     last_name = forms.CharField(label='Last Name', required=True, max_length=100, widget=forms.TextInput(attrs={ 'class' : 'form-control'}))
+    email = forms.EmailField(label='Email', required=True, max_length=100, widget=forms.EmailInput(attrs={ 'class' : 'form-control'}))
     password = forms.CharField(label='Password', required=True, max_length=100, widget=forms.PasswordInput(attrs={ 'class': 'form-control', 'minlength': '6' }))
     password2 = forms.CharField(label='Confirm Password', required=True, max_length=100, widget=forms.PasswordInput(attrs={ 'class': 'form-control' }))
 
