@@ -1,0 +1,11 @@
+## Python ##
+db.sqlite3
+__pycache__
+*.cached_templates/
+
+## Heroku ##
+security_basics/settings-dev.py
+security_basics/settings-prod.py
+static/
+staticfiles/
+notes.txt

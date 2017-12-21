@@ -1,0 +1,25 @@
+<%inherit file="base.htm" />
+
+<%block name="content">
+<section id="login">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="card w-75 mx-auto text-center">
+                    <div class="card-header">
+                        <h4 class="card-title">Log In</h4>
+                    </div>
+                    <div class="card-body">
+                        <form id="loginform" role="form" action="/index" method="POST">${ csrf_input}
+                            <table class="table" align="center">
+                                ${ form }
+                            </table>
+                            <input type="submit" class="btn btn-dark" value="Log In">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</%block>

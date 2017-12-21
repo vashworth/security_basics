@@ -1,0 +1,37 @@
+#users {
+    height: 100%;
+}
+
+.nav {
+    border-radius: .25rem;
+    margin-bottom: 50px;
+}
+
+#users .nav-link.active {
+    background-color: #2b5876;
+}
+
+#users .nav-link {
+    color: #fff;
+}
+
+#users .nav-link:hover {
+    color: #343A40;
+}
+
+.card {
+    margin-top: 20px;
+}
+
+.table {
+    margin-top: 20px;
+}
+
+#users .table a {
+    color: #4e4376;
+}
+
+#users .table a:hover {
+    color: #343A40;
+    text-decoration: none;
+}

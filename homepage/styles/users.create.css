@@ -1,0 +1,34 @@
+#create_user {
+    height: 100%;
+    background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);
+}
+
+.nav {
+    border-radius: .25rem;
+    margin-bottom: 50px;
+}
+
+#create_user .nav-link.active {
+    background-color: #2b5876;
+}
+
+#create_user .nav-link {
+    color: #fff;
+}
+
+#create_user .nav-link:hover {
+    color: #343A40;
+}
+
+.table {
+    margin-top: 20px;
+    text-align: right;
+}
+
+#CreateUserForm td, #CreateUserForm th {
+    border: 0;
+}
+
+#CreateUserForm .btn:hover {
+    cursor: pointer;
+}

@@ -1,0 +1,43 @@
+security<%inherit file="base.htm" />
+
+<%block name="content">
+<div class="wrapper">
+    <section id="create_user">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <ul class="nav nav-pills nav-fill">
+                      <li class="nav-item">
+                        <a class="nav-link" href="/securityflaws">Security Flaws</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active" href="/users">Users</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="/logout">Logout</a>
+                      </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Create a new user</h4>
+                            <hr />
+                            <form id="CreateUserForm" action="/users.create" role="form" method="POST">${ csrf_input}
+                                <table class="table">
+                                    ${ form }
+                                </table>
+                                <div class="text-center">
+                                    <input type="submit" class="btn btn-dark" value="Submit">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+</%block>

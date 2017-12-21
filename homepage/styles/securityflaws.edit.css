@@ -1,0 +1,33 @@
+#edit_securityflaw {
+    height: 100%;
+}
+
+.nav {
+    border-radius: .25rem;
+    margin-bottom: 50px;
+}
+
+#edit_securityflaw .nav-link.active {
+    background-color: #2b5876;
+}
+
+#edit_securityflaw .nav-link {
+    color: #fff;
+}
+
+#edit_securityflaw .nav-link:hover {
+    color: #343A40;
+}
+
+.table {
+    margin-top: 20px;
+    text-align: right;
+}
+
+#EditSecurityFlawForm td, #EditSecurityFlawForm th {
+    border: 0;
+}
+
+#EditSecurityFlawForm .btn:hover {
+    cursor: pointer;
+}

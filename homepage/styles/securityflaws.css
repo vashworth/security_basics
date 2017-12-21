@@ -1,0 +1,37 @@
+#securityflaws {
+    height: 100%;
+}
+
+.nav {
+    border-radius: .25rem;
+    margin-bottom: 50px;
+}
+
+#securityflaws .nav-link.active {
+    background-color: #2b5876;
+}
+
+#securityflaws .nav-link {
+    color: #fff;
+}
+
+#securityflaws .nav-link:hover {
+    color: #343A40;
+}
+
+.card {
+    margin-top: 20px;
+}
+
+.table {
+    margin-top: 20px;
+}
+
+#securityflaws .table a {
+    color: #4e4376;
+}
+
+#securityflaws .table a:hover {
+    color: #343A40;
+    text-decoration: none;
+}

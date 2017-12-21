@@ -1,0 +1,33 @@
+#edit_user {
+    height: 100%;
+}
+
+.nav {
+    border-radius: .25rem;
+    margin-bottom: 50px;
+}
+
+#edit_user .nav-link.active {
+    background-color: #2b5876;
+}
+
+#edit_user .nav-link {
+    color: #fff;
+}
+
+#edit_user .nav-link:hover {
+    color: #343A40;
+}
+
+.table {
+    margin-top: 20px;
+    text-align: right;
+}
+
+#EditUserForm td, #EditUserForm th {
+    border: 0;
+}
+
+#EditUserForm .btn:hover {
+    cursor: pointer;
+}
